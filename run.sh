@@ -10,7 +10,8 @@ CONTAINER_PORT="8000"
 # For security, you should load this from a .env file or environment,
 # but for a quick script, setting it here works.
 OPENAI_API_KEY=""
-
+echo "--- 🏗️  Pulling repo"
+git pull origin main
 echo "--- 🏗️  Step 1: Building the Docker Image ($IMAGE_NAME) ---"
 # Build the image. This is necessary if Dockerfile or requirements.txt changed.
 # The `|| exit 1` stops the script if the build fails.
